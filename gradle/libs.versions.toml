@@ -17,6 +17,8 @@ roomRuntime = "2.7.1"
 gson = "2.13.1"
 koinAnnotations = "2.0.0"
 koinBom = "4.0.3"
+legacySupportV4 = "1.0.0"
+fragmentKtx = "1.5.6"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +41,8 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinBom"
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koinAnnotations" }
 koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koinAnnotations" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
