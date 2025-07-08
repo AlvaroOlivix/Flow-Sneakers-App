@@ -1,5 +1,8 @@
 [versions]
 agp = "8.10.0"
+faltenreichSkeletonlayout = "6.0.0"
+firebaseBom = "33.15.0"
+firebaseFirestoreKtx = "25.1.4"
 kotlin = "2.0.21"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -19,9 +22,16 @@ koinAnnotations = "2.0.0"
 koinBom = "4.0.3"
 legacySupportV4 = "1.0.0"
 fragmentKtx = "1.5.6"
+googleGmsGoogleServices = "4.4.2"
+firebaseFirestore = "25.1.4"
+skeletonlayout = "5.0.0"
+navArg = "2.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+com-faltenreich-skeletonlayout = { module = "com.faltenreich:skeletonlayout", version.ref = "faltenreichSkeletonlayout" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+google-firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -43,8 +53,11 @@ koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref =
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
-
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+navArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navArg" }
