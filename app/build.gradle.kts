@@ -53,10 +53,13 @@ dependencies {
 
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.koin.core)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.fragment.ktx)
 
     implementation(libs.koin.android)
     ksp(libs.koin.ksp.compiler)
     implementation(libs.koin.annotations)
+    
 
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
