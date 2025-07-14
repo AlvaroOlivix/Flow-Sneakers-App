@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cuando el EditText está enfocado -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/outline_arrow_back_24" />
+    <!-- Estado por defecto -->
+    <item android:drawable="@drawable/ic_search" />
+</selector>
