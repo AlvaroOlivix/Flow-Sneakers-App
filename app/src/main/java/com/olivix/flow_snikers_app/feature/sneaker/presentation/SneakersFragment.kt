@@ -52,6 +52,7 @@ class SneakersFragment : Fragment() {
     }
 
     private fun setupObserver() {
+
         viewModel.uiState.observe(viewLifecycleOwner) { state ->
             if (state.isLoading) {
                 // Solo aquí muestras el skeleton
