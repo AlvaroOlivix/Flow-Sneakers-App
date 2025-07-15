@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.navArgs)
+    alias(libs.plugins.googleService)
 }
 
 android {
@@ -37,7 +39,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    ksp { arg("KOIN_CONFIG_CHECK", "true") }
+
+    ksp {
+        arg("KOIN_DEFAULT_MODULE", "true")
+        arg("KOIN_CONFIG_CHECK", "true")
+    }
 }
 
 dependencies {
@@ -57,18 +63,20 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
 
     implementation(libs.koin.android)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.firestore)
     ksp(libs.koin.ksp.compiler)
     implementation(libs.koin.annotations)
-    
 
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     implementation(libs.gson)
 
+    implementation(libs.skeletonlayout)
 
-
-
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
